@@ -1,4 +1,4 @@
-# Filtr Kalmana — śledzenie trajektorii lotniczych
+# Filtr Kalmana - śledzenie trajektorii lotniczych
 
 Projekt dyplomowy implementujący liniowy filtr Kalmana (model CV 2D) do estymacji i predykcji pozycji statków powietrznych na podstawie danych ADS-B z datasetu TrajAir.
 
@@ -22,7 +22,7 @@ Projekt/
 │   └── test_kalman.py    # testy jednostkowe (pytest)
 ├── analysis.ipynb        # notebook z pełną analizą
 ├── start_simulation.py   # skrypt startowy symulacji
-├── data/                 # dane TrajAir (pobierz osobno — patrz niżej)
+├── data/                 # dane TrajAir (pobierz osobno - patrz niżej)
 └── results/              # wyeksportowane wykresy z notebooka
 ```
 
@@ -36,7 +36,7 @@ pip install -r requirements.txt
 
 ## Dane TrajAir
 
-Dataset **TrajAir** (Carnegie Mellon University) — trajektorie ADS-B samolotów wokół lotniska Pittsburgh-Butler Regional Airport (KBTP), wrzesień 2020.
+Dataset **TrajAir** (Carnegie Mellon University) - trajektorie ADS-B samolotów wokół lotniska Pittsburgh-Butler Regional Airport (KBTP), wrzesień 2020.
 
 1. Pobierz archiwum ze strony (wybierz `7days.zip`) 
    https://kilthub.cmu.edu/articles/dataset/TrajAir_A_General_Aviation_Trajectory_Dataset/14866251
@@ -91,7 +91,7 @@ python start_simulation.py
 | `drop%` | Prawdopodobieństwo braku pomiaru (dropout) |
 | `spike%` | Prawdopodobieństwo błędnego pomiaru (outlier) |
 
-W trybie **REAL** wszystkie suwaki działają — sigma i q kontrolują parametry filtra na danych ADS-B, drop%/spike% symulują degradację łącza.
+W trybie **REAL** wszystkie suwaki działają - sigma i q kontrolują parametry filtra na danych ADS-B, drop%/spike% symulują degradację łącza.
 
 ## Notebook analityczny
 
@@ -99,7 +99,7 @@ W trybie **REAL** wszystkie suwaki działają — sigma i q kontrolują parametr
 jupyter notebook analysis.ipynb
 ```
 
-Lub w VS Code z rozszerzeniem Jupyter — otwórz `analysis.ipynb` i uruchom komórki sekwencyjnie (`Run All`).
+Lub w VS Code z rozszerzeniem Jupyter - otwórz `analysis.ipynb` i uruchom komórki sekwencyjnie (`Run All`).
 
 Notebook zawiera:
 - Sekcje 1–7: analiza wrażliwości FK na σ, q, horyzont predykcji, dropout, outliery, bramkowanie innowacji
